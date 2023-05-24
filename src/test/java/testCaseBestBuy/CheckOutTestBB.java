@@ -30,7 +30,9 @@ public class CheckOutTestBB extends BaseClassBB {
 		cp.goToCheckOutPage();
 		CheckOutPageBB cop=new CheckOutPageBB();
 		cop.contactInfoAtCheckOut("vino18493@gmail.com", "9876543210", imgName);
+		
+		//The below commented line contains script which can run if application works properly
 		//cop.enterDetailsOnCheckOut("5432167890654321", "12", "2025", "321", "SonName", "FatherName", "123 Vvikanandhar Road", "Utto", "DC", "32145");
-		//The above commented line contains script which can run if application works properly
+		
 	}
 }
