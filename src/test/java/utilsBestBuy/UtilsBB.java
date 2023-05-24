@@ -18,6 +18,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -31,8 +32,7 @@ public class UtilsBB {
 
 	public static WebDriver driver;
 	public String sheetName;
-	public String imgName;
-
+	
 	public static String readProperty(String key) throws Exception {
 		String projectPath = System.getProperty("user.dir");
 		File file = new File(projectPath + "/configBestBuy.properties");
@@ -45,6 +45,8 @@ public class UtilsBB {
 	public static void launchBrowser(String browser) {
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("--headless");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
@@ -144,8 +146,8 @@ public class UtilsBB {
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
 	}
 	
-	public static void screenShot(WebElement element,String imgName) throws Exception, Exception {
-		waitExplicit(element);
+	public static void screenShot(String imgName) throws Exception, Exception {
+		Thread.sleep(3000);
 		String excelPath=System.getProperty("user.dir");
 		FileUtils.copyFile(((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE), new File(excelPath+"/Screenshot/"+imgName+".png"));
 	}

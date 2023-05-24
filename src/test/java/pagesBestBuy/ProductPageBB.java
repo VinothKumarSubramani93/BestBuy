@@ -46,7 +46,7 @@ public class ProductPageBB extends BaseClassBB {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public String addLogitechMouse(String imgName) throws Exception {
+	public String addLogitechMouse() throws Exception {
 		String logiTechTitleAtProdPage = extractText(logitechMouseAtProductPage);
 		clickOn(addToCartLogitechMouse);
 		clickOn(goToCartButton);

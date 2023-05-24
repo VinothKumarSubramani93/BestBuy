@@ -11,12 +11,14 @@ import pagesBestBuy.LocationPageBB;
 import pagesBestBuy.SignInPageBB;
 
 public class SignInTestBB extends BaseClassBB {
+	
 	@BeforeTest
 	public void excelSheet() {
 		sheetName="signInTestData";
 	}
+	
 	@Test(dataProvider="getFromExcel")
-	public void tc_03_SignInFunctionality(String email,String password, String xpath,String expMsg) {
+	public void tc_03_SignInFunctionality(String email,String password, String xpath,String expMsg) throws Exception {
 		LocationPageBB lp=new LocationPageBB();
 		lp.deliveryAtUSA();
 		HomePageBB hp=new HomePageBB();
@@ -25,7 +27,4 @@ public class SignInTestBB extends BaseClassBB {
 		String actMsg = sp.signInFunctionality(email,password,xpath);
 		Assert.assertEquals(actMsg, expMsg);
 	}
-	
-	
-	
 }

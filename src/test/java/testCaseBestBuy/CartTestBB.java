@@ -18,7 +18,7 @@ public class CartTestBB extends BaseClassBB {
 		HomePageBB hp=new HomePageBB();
 		hp.searchProduct("Mouse");
 		ProductPageBB pp=new ProductPageBB();
-		String prodTitleAtProductPage = pp.addLogitechMouse("imgName");
+		String prodTitleAtProductPage = pp.addLogitechMouse();
 		CartPageBB cp=new CartPageBB();
 		String prodTitleAtCartPage = cp.validateLogitechMouseInCart();
 		Assert.assertEquals(prodTitleAtProductPage,prodTitleAtCartPage );

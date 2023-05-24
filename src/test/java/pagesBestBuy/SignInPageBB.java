@@ -25,18 +25,12 @@ public class SignInPageBB extends BaseClassBB{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public String signInFunctionality(String email, String password,String textXpath) {
+	public String signInFunctionality(String email, String password,String textXpath) throws Exception {
 		type(this.email, email);
 		type(this.password, password);
 		clickOn(signInButton);
 		String actMsg=driver.findElement(By.xpath(""+textXpath+"")).getText();
+		screenShot("tc_03_SignInFunctionality "+Math.random()+"");
 		return actMsg;
-	}
-	
-	public void signInToMyAccount() throws Exception {
-		type(this.email, readProperty("email"));
-		type(this.password, readProperty("password"));
-		clickOn(signInButton);
-		clickOn(goToHomePage);
 	}
 }

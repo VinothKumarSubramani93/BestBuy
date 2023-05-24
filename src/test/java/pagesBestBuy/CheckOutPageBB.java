@@ -95,13 +95,13 @@ public class CheckOutPageBB extends BaseClassBB {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void contactInfoAtCheckOut(String emailAtCheckOut,String mobileNumAtCheckOut,String imgName) throws Exception {
+	public void contactInfoAtCheckOut(String emailAtCheckOut,String mobileNumAtCheckOut) throws Exception {
 		clickOn(continueAsGuest);
 		type(this.emailAtCheckOut, emailAtCheckOut);
 		type(this.mobileNumAtCheckOut, mobileNumAtCheckOut);
 		clickOn(textUpdateCheckBox);
 		clickOn(continueToPayement);
-		screenShot(sryMsgWitOutSignInB4CheckOut, imgName);
+		screenShot("tc_09_CheckOut");
 	}
 	public void enterDetailsOnCheckOut(String debitCardNumber,String expMonthVisibleText,String expYearVisibleText,String cvv,String firstName,String lastName, 
 			String address, String city, String stateVisibleText, String postalCode) throws Exception {
@@ -116,6 +116,7 @@ public class CheckOutPageBB extends BaseClassBB {
 		selectFromDropDown(state, stateVisibleText);
 		type(this.postalCode, postalCode);
 		clickOn(placeYourOrder);
+		screenShot("tc_09_CheckOut");
 	}
 	
 	public void signInAtCheckOut() {
