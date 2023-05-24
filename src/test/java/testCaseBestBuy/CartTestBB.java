@@ -12,13 +12,13 @@ import pagesBestBuy.ProductPageBB;
 public class CartTestBB extends BaseClassBB {
 	
 	@Test
-	public void tc_06_SearchAddItemInCart() {
+	public void tc_06_SearchAddItemInCart() throws Exception {
 		LocationPageBB lp=new LocationPageBB();
 		lp.deliveryAtUSA();
 		HomePageBB hp=new HomePageBB();
 		hp.searchProduct("Mouse");
 		ProductPageBB pp=new ProductPageBB();
-		String prodTitleAtProductPage = pp.addLogitechMouse();
+		String prodTitleAtProductPage = pp.addLogitechMouse("imgName");
 		CartPageBB cp=new CartPageBB();
 		String prodTitleAtCartPage = cp.validateLogitechMouseInCart();
 		Assert.assertEquals(prodTitleAtProductPage,prodTitleAtCartPage );

@@ -27,7 +27,6 @@ public class LocationPageBB extends BaseClassBB {
 	}
 	
 	public String bestBuyPageTitle() throws Exception {
-		screenShot("tc_01_validateBBUrlLaunched");
 		return getPageTitle();
 	}
 	

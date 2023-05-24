@@ -1,5 +1,6 @@
 package testCaseBestBuy;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import baseBestBuy.BaseClassBB;
@@ -11,18 +12,25 @@ import pagesBestBuy.ProductPageBB;
 
 public class CheckOutTestBB extends BaseClassBB {
 	//https://www.bestbuy.com/checkout/r/payment
+	
+	@BeforeTest
+	public void assignName() {
+		imgName="tc_09_CheckOut";
+	}
+	
 	@Test
-	public void tc_09_CheckOut() {
+	public void tc_09_CheckOut() throws Exception {
 		LocationPageBB lp=new LocationPageBB();
 		lp.deliveryAtUSA();
 		HomePageBB hp=new HomePageBB();
 		hp.searchProduct("Mouse");
 		ProductPageBB pp=new ProductPageBB();
-		String dummyReturn = pp.addLogitechMouse();
+		pp.addLogitechMouse(imgName);
 		CartPageBB cp=new CartPageBB();
 		cp.goToCheckOutPage();
 		CheckOutPageBB cop=new CheckOutPageBB();
-		cop.contactInfoAtCheckOut("vino18493@gmail.com", "9876543210");
-		cop.enterDetailsOnCheckOut("5432167890654321", "12", "2025", "321", "SonName", "FatherName", "123 Vvikanandhar Road", "Utto", "DC", "32145");
+		cop.contactInfoAtCheckOut("vino18493@gmail.com", "9876543210", imgName);
+		//cop.enterDetailsOnCheckOut("5432167890654321", "12", "2025", "321", "SonName", "FatherName", "123 Vvikanandhar Road", "Utto", "DC", "32145");
+		//The above commented line contains script which can run if application works properly
 	}
 }

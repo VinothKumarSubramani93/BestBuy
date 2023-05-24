@@ -5,6 +5,7 @@
     <classes>
       <class name="testCaseBestBuy.CheckOutTestBB">
         <methods>
+          <include name="assignName"/>
           <include name="tc_09_CheckOut"/>
           <include name="start"/>
           <include name="close"/>

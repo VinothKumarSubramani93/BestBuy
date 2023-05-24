@@ -31,6 +31,7 @@ public class UtilsBB {
 
 	public static WebDriver driver;
 	public String sheetName;
+	public String imgName;
 
 	public static String readProperty(String key) throws Exception {
 		String projectPath = System.getProperty("user.dir");
@@ -143,7 +144,8 @@ public class UtilsBB {
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
 	}
 	
-	public static void screenShot(String imgName) throws Exception, Exception {
+	public static void screenShot(WebElement element,String imgName) throws Exception, Exception {
+		waitExplicit(element);
 		String excelPath=System.getProperty("user.dir");
 		FileUtils.copyFile(((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE), new File(excelPath+"/Screenshot/"+imgName+".png"));
 	}
