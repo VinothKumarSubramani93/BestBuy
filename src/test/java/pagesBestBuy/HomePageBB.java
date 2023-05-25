@@ -128,28 +128,33 @@ public class HomePageBB extends BaseClassBB {
 	}
 
 	public void goToCartPage() {
-		clickOn(cartButton);
+		jsClickOn(cartButton);
 	}
 
-	public void selectSamsungBrand() {
+	public void selectLenovoBrand() {
 		clickOn(menuButton);
 		clickOn(brandsInMenu);
 		clickOn(lenovoInBrandsMenu);
 	}
 
-	public void menuValidation(String menuName, String expTitle) {
+	public String menuValidation(String menuName) {
 		if (menuName.equalsIgnoreCase("Best Buy Business")) {
 			clickOn(moreMenu);
 			clickOn(driver.findElement(By.xpath("//li[@class='liDropdownList']//a[text()='" + menuName + "']")));
-			titleAssertion(expTitle);
+			String actTitle = getPageTitle();
+			return actTitle;
 		} else {
 			clickOn(driver.findElement(By.xpath("//a[text()='" + menuName + "']")));
-			titleAssertion(expTitle);
+			String actTitle = getPageTitle();
+			return actTitle;
 		}
+		
 	}
 	
-	public void validateTermsAndCondtionLink() {
+	public String validateTermsAndCondtionLink() {
 		jsScrollUntillElement(termsAndCondLink);
 		clickOn(termsAndCondLink);
+		String actTitle = getPageTitle();
+		return actTitle;
 	}
 }

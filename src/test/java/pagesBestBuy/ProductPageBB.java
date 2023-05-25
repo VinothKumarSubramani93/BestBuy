@@ -26,9 +26,8 @@ public class ProductPageBB extends BaseClassBB {
 	@FindBy(xpath="//h1[contains(text(),'Sony - 75')]")
 	WebElement sony75InchTvHeading;
 	
-	@FindBy(xpath="//a[contains(text(),'Sony - 75')]")
+	@FindBy(xpath="//a[contains(text(),'Sony - 75\" Class BRAVIA XR X90K 4K HDR Full Array LED Google TV')]")
 	WebElement sony75InchTvHeadingM2;
-	
 	
 	@FindBy(xpath="//a[contains(text(),'Sony - 75')]")
 	WebElement sony75InchTv;
@@ -36,7 +35,7 @@ public class ProductPageBB extends BaseClassBB {
 	@FindBy(xpath="//p[text()='ThinkPad laptops']")
 	WebElement thinkPadLaptopsAtLenovoProdPage;
 	
-	@FindBy(xpath="//a[contains(text(),'Lenovo - ThinkPad E15 Gen 4')]")
+	@FindBy(xpath="//a[contains(text(),'Lenovo - ThinkPad E15 Gen 4 15.6\" Notebook - AMD Ryzen 5 5625U - 16GB Memory - 512GB SSD - Gray')]")
 	WebElement lenovoThinkPad4TitleAtProdPage;
 	
 	@FindBy(xpath="//button[@data-sku-id='6518017' and @data-button-state='ADD_TO_CART']")
@@ -62,7 +61,9 @@ public class ProductPageBB extends BaseClassBB {
 	
 	public String addSony75InchTVInProdPageM2() {
 		String sony75TitleAtProdPage = extractText(sony75InchTvHeadingM2);
-		clickOn(addToCartTv);
+		clickOn(sony75InchTvHeadingM2);
+		jsScrollUntillElement(addToCartTv);
+		jsClickOn(addToCartTv);
 		//clickOn(goToCartButton);
 		return sony75TitleAtProdPage;
 	}
@@ -70,7 +71,9 @@ public class ProductPageBB extends BaseClassBB {
 	public String addLenovoThinkPadInProdPage() {
 		clickOn(thinkPadLaptopsAtLenovoProdPage);
 		String lenovoThinkPadTitleAtProdPage = extractText(lenovoThinkPad4TitleAtProdPage);
-		clickOn(addToCartLenovoThinkPad);
+		jsClickOn(lenovoThinkPad4TitleAtProdPage);
+		jsScrollUntillElement(addToCartLenovoThinkPad);
+		jsClickOn(addToCartLenovoThinkPad);
 		return lenovoThinkPadTitleAtProdPage;
 	}
 }

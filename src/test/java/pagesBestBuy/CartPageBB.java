@@ -11,7 +11,7 @@ public class CartPageBB extends BaseClassBB {
 	@FindBy(xpath="//a[contains(text(),'Logitech')]")
 	WebElement logitechMouseAddedInCart;
 	
-	@FindBy(xpath="//a[contains(text(),'Sony - 75')]")
+	@FindBy(xpath="//a[contains(text(),'Sony - 75\" Class BRAVIA XR X90K 4K HDR Full Array LED Google TV')]")
 	WebElement sony75InchTvAddedInCart;
 	
 	@FindBy(xpath="//a[contains(text(),'Lenovo - ThinkPad E15')]")

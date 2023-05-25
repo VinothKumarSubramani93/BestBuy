@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test(failed)</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/5/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 24 19:36:08 IST 2023</td>
+<td>Started on:</td><td>Thu May 25 16:05:14 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>341 seconds (341774 ms)</td>
+<tr><td>Total time:</td><td>262 seconds (262841 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,19 +75,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCaseBestBuy.SignInTestBB.tc_03_SignInFunctionality()'><b>tc_03_SignInFunctionality</b><br>Test class: testCaseBestBuy.SignInTestBB<br>Parameters: vino184@gmail.com, testingtesting, //strong//div, We didn't find an account with that email address. Would you like to create an account?</td>
-<td><div><pre>java.lang.AssertionError: expected [We didn&apos;t find an account with that email address. Would you like to create an account?] but found [Sorry, something went wrong. Please try again.]
-	at testCaseBestBuy.SignInTestBB.tc_03_SignInFunctionality(SignInTestBB.java:26)
+<td title='testCaseBestBuy.TC_03_SignInFunctionality.tc_03_SignInFunctionality()'><b>tc_03_SignInFunctionality</b><br>Test class: testCaseBestBuy.TC_03_SignInFunctionality<br>Parameters: vino184@gmail.com, testing, //strong//div, We didn't find an account with that email address. Would you like to create an account?</td>
+<td><div><pre>java.lang.RuntimeException: See extent report for more details
+	at utilsBestBuy.UtilsBB.reportStep(UtilsBB.java:178)
+	at testCaseBestBuy.TC_03_SignInFunctionality.tc_03_SignInFunctionality(TC_03_SignInFunctionality.java:35)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace46767245", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace46767245'><pre>java.lang.AssertionError: expected [We didn&apos;t find an account with that email address. Would you like to create an account?] but found [Sorry, something went wrong. Please try again.]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at org.testng.Assert.assertEquals(Assert.java:639)
-	at testCaseBestBuy.SignInTestBB.tc_03_SignInFunctionality(SignInTestBB.java:26)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2133668271", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2133668271'><pre>java.lang.RuntimeException: See extent report for more details
+	at utilsBestBuy.UtilsBB.reportStep(UtilsBB.java:178)
+	at testCaseBestBuy.TC_03_SignInFunctionality.tc_03_SignInFunctionality(TC_03_SignInFunctionality.java:35)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -117,22 +113,54 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>25</td>
-<td>testCaseBestBuy.SignInTestBB@1de76cc7</td></tr>
+<td>26</td>
+<td>testCaseBestBuy.TC_03_SignInFunctionality@f0da945</td></tr>
 <tr>
-<td title='testCaseBestBuy.SignInTestBB.tc_03_SignInFunctionality()'><b>tc_03_SignInFunctionality</b><br>Test class: testCaseBestBuy.SignInTestBB<br>Parameters: vino184@gmail.com, testing, //strong//div, We didn't find an account with that email address. Would you like to create an account?</td>
-<td><div><pre>java.lang.AssertionError: expected [We didn&apos;t find an account with that email address. Would you like to create an account?] but found [Sorry, something went wrong. Please try again.]
-	at testCaseBestBuy.SignInTestBB.tc_03_SignInFunctionality(SignInTestBB.java:26)
+<td title='testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu.tc_07_selAddItemShopByDeptMenu()'><b>tc_07_selAddItemShopByDeptMenu</b><br>Test class: testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //button[@data-sku-id=&apos;6499752&apos; and @data-button-state=&apos;ADD_TO_CART&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at utilsBestBuy.UtilsBB.waitExplicit(UtilsBB.java:77)
+	at utilsBestBuy.UtilsBB.clickOn(UtilsBB.java:100)
+	at pagesBestBuy.ProductPageBB.addSony75InchTVInProdPageM2(ProductPageBB.java:65)
+	at testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu.tc_07_selAddItemShopByDeptMenu(TC_07_SelAddItemShopByDeptMenu.java:31)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1144673247", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1144673247'><pre>java.lang.AssertionError: expected [We didn&apos;t find an account with that email address. Would you like to create an account?] but found [Sorry, something went wrong. Please try again.]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at org.testng.Assert.assertEquals(Assert.java:639)
-	at testCaseBestBuy.SignInTestBB.tc_03_SignInFunctionality(SignInTestBB.java:26)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@data-sku-id=&apos;6499752&apos; and @data-button-state=&apos;ADD_TO_CART&apos;]&quot;}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-N995C3G&apos;, ip: &apos;192.168.29.6&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:49768}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 03e8ccbae22f4062c5f514b8a86f0d79
+*** Element info: {Using=xpath, value=//button[@data-sku-id=&apos;6499752&apos; and @data-button-state=&apos;ADD_TO_CART&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 32 more
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1343407473", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1343407473'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //button[@data-sku-id=&apos;6499752&apos; and @data-button-state=&apos;ADD_TO_CART&apos;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at utilsBestBuy.UtilsBB.waitExplicit(UtilsBB.java:77)
+	at utilsBestBuy.UtilsBB.clickOn(UtilsBB.java:100)
+	at pagesBestBuy.ProductPageBB.addSony75InchTVInProdPageM2(ProductPageBB.java:65)
+	at testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu.tc_07_selAddItemShopByDeptMenu(TC_07_SelAddItemShopByDeptMenu.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -161,19 +189,52 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@data-sku-id=&apos;6499752&apos; and @data-button-state=&apos;ADD_TO_CART&apos;]&quot;}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-N995C3G&apos;, ip: &apos;192.168.29.6&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:49768}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 03e8ccbae22f4062c5f514b8a86f0d79
+*** Element info: {Using=xpath, value=//button[@data-sku-id=&apos;6499752&apos; and @data-button-state=&apos;ADD_TO_CART&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 32 more
 </pre></div></td>
-<td>155</td>
-<td>testCaseBestBuy.SignInTestBB@1de76cc7</td></tr>
+<td>40</td>
+<td>testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu@957e06</td></tr>
 <tr>
-<td title='testCaseBestBuy.SignInTestBB.tc_03_SignInFunctionality()'><b>tc_03_SignInFunctionality</b><br>Test class: testCaseBestBuy.SignInTestBB<br>Parameters: vino18493@gmail.com, testingtesting, //span[text()='Hi, Test'], Hi, Test</td>
+<td title='testCaseBestBuy.TC_03_SignInFunctionality.tc_03_SignInFunctionality()'><b>tc_03_SignInFunctionality</b><br>Test class: testCaseBestBuy.TC_03_SignInFunctionality<br>Parameters: vino18493@gmail.com, testingtesting, //span[text()='Hi, Test'], Hi, Test</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Hi, Test&apos;]&quot;}
   (Session info: chrome=113.0.5672.127)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-N995C3G&apos;, ip: &apos;192.168.29.6&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:52698}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7de8d19d5ba5cd45ac4752e1ab0a2ed8
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:49399}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a9a52cea70b6348bc349bb6553198c48
 *** Element info: {Using=xpath, value=//span[text()=&apos;Hi, Test&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -186,17 +247,17 @@ Session ID: 7de8d19d5ba5cd45ac4752e1ab0a2ed8
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at pagesBestBuy.SignInPageBB.signInFunctionality(SignInPageBB.java:32)
-	at testCaseBestBuy.SignInTestBB.tc_03_SignInFunctionality(SignInTestBB.java:25)
+	at testCaseBestBuy.TC_03_SignInFunctionality.tc_03_SignInFunctionality(TC_03_SignInFunctionality.java:29)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1659537713", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1659537713'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Hi, Test&apos;]&quot;}
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1594600318", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1594600318'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Hi, Test&apos;]&quot;}
   (Session info: chrome=113.0.5672.127)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-N995C3G&apos;, ip: &apos;192.168.29.6&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:52698}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7de8d19d5ba5cd45ac4752e1ab0a2ed8
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:49399}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a9a52cea70b6348bc349bb6553198c48
 *** Element info: {Using=xpath, value=//span[text()=&apos;Hi, Test&apos;]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
@@ -214,7 +275,7 @@ Session ID: 7de8d19d5ba5cd45ac4752e1ab0a2ed8
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at pagesBestBuy.SignInPageBB.signInFunctionality(SignInPageBB.java:32)
-	at testCaseBestBuy.SignInTestBB.tc_03_SignInFunctionality(SignInTestBB.java:25)
+	at testCaseBestBuy.TC_03_SignInFunctionality.tc_03_SignInFunctionality(TC_03_SignInFunctionality.java:29)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -244,18 +305,18 @@ Session ID: 7de8d19d5ba5cd45ac4752e1ab0a2ed8
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>22</td>
-<td>testCaseBestBuy.SignInTestBB@1de76cc7</td></tr>
+<td>32</td>
+<td>testCaseBestBuy.TC_03_SignInFunctionality@f0da945</td></tr>
 <tr>
-<td title='testCaseBestBuy.SignInTestBB.tc_03_SignInFunctionality()'><b>tc_03_SignInFunctionality</b><br>Test class: testCaseBestBuy.SignInTestBB<br>Parameters: vino18493@gmail.com, teting, //div[text()='The password was incorrect. Please try again.'], The password was incorrect. Please try again.</td>
+<td title='testCaseBestBuy.TC_03_SignInFunctionality.tc_03_SignInFunctionality()'><b>tc_03_SignInFunctionality</b><br>Test class: testCaseBestBuy.TC_03_SignInFunctionality<br>Parameters: vino18493@gmail.com, teting, //div[text()='The password was incorrect. Please try again.'], The password was incorrect. Please try again.</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;The password was incorrect. Please try again.&apos;]&quot;}
   (Session info: chrome=113.0.5672.127)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-N995C3G&apos;, ip: &apos;192.168.29.6&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:52573}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 65d3e9e6eaf2ea3cf08a7358bfb86716
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:49283}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 851e332930cf8e65797ed2b01f5d97c7
 *** Element info: {Using=xpath, value=//div[text()=&apos;The password was incorrect. Please try again.&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -268,17 +329,17 @@ Session ID: 65d3e9e6eaf2ea3cf08a7358bfb86716
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at pagesBestBuy.SignInPageBB.signInFunctionality(SignInPageBB.java:32)
-	at testCaseBestBuy.SignInTestBB.tc_03_SignInFunctionality(SignInTestBB.java:25)
+	at testCaseBestBuy.TC_03_SignInFunctionality.tc_03_SignInFunctionality(TC_03_SignInFunctionality.java:29)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace516570791", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace516570791'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;The password was incorrect. Please try again.&apos;]&quot;}
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace831285461", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace831285461'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;The password was incorrect. Please try again.&apos;]&quot;}
   (Session info: chrome=113.0.5672.127)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-N995C3G&apos;, ip: &apos;192.168.29.6&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:52573}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 65d3e9e6eaf2ea3cf08a7358bfb86716
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:49283}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 851e332930cf8e65797ed2b01f5d97c7
 *** Element info: {Using=xpath, value=//div[text()=&apos;The password was incorrect. Please try again.&apos;]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
@@ -296,7 +357,7 @@ Session ID: 65d3e9e6eaf2ea3cf08a7358bfb86716
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at pagesBestBuy.SignInPageBB.signInFunctionality(SignInPageBB.java:32)
-	at testCaseBestBuy.SignInTestBB.tc_03_SignInFunctionality(SignInTestBB.java:25)
+	at testCaseBestBuy.TC_03_SignInFunctionality.tc_03_SignInFunctionality(TC_03_SignInFunctionality.java:29)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -326,8 +387,91 @@ Session ID: 65d3e9e6eaf2ea3cf08a7358bfb86716
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>25</td>
-<td>testCaseBestBuy.SignInTestBB@1de76cc7</td></tr>
+<td>26</td>
+<td>testCaseBestBuy.TC_03_SignInFunctionality@f0da945</td></tr>
+<tr>
+<td title='testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu.tc_08_selAddItemShopByBrandMenu()'><b>tc_08_selAddItemShopByBrandMenu</b><br>Test class: testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;p class=&quot;tile-heading esg-link esg-margin-top-none&quot;&gt;...&lt;/p&gt; is not clickable at point (791, 723). Other element would receive the click: &lt;div id=&quot;survey_window&quot; class=&quot;modal fade modal-open in&quot; role=&quot;dialog&quot; style=&quot;margin-top: 243px; display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=113.0.5672.127)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-N995C3G&apos;, ip: &apos;192.168.29.6&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:49920}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cbf699d0c79d6cf91c86555ae1ceacd6
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+	at utilsBestBuy.UtilsBB.clickOn(UtilsBB.java:101)
+	at pagesBestBuy.ProductPageBB.addLenovoThinkPadInProdPage(ProductPageBB.java:71)
+	at testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu.tc_08_selAddItemShopByBrandMenu(TC_08_SelAddItemShopByBrandMenu.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace476234749", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace476234749'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;p class=&quot;tile-heading esg-link esg-margin-top-none&quot;&gt;...&lt;/p&gt; is not clickable at point (791, 723). Other element would receive the click: &lt;div id=&quot;survey_window&quot; class=&quot;modal fade modal-open in&quot; role=&quot;dialog&quot; style=&quot;margin-top: 243px; display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=113.0.5672.127)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-N995C3G&apos;, ip: &apos;192.168.29.6&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:49920}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cbf699d0c79d6cf91c86555ae1ceacd6
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+	at utilsBestBuy.UtilsBB.clickOn(UtilsBB.java:101)
+	at pagesBestBuy.ProductPageBB.addLenovoThinkPadInProdPage(ProductPageBB.java:71)
+	at testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu.tc_08_selAddItemShopByBrandMenu(TC_08_SelAddItemShopByBrandMenu.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>16</td>
+<td>testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu@32502377</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -337,20 +481,15 @@ Session ID: 65d3e9e6eaf2ea3cf08a7358bfb86716
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCaseBestBuy.CartTestBB.tc_06_SearchAddItemInCart()'><b>tc_06_SearchAddItemInCart</b><br>Test class: testCaseBestBuy.CartTestBB</td>
+<td title='testCaseBestBuy.TC_03_CreatAccountFunctionality.tc_03_validateCreatAccountFunctionality()'><b>tc_03_validateCreatAccountFunctionality</b><br>Test class: testCaseBestBuy.TC_03_CreatAccountFunctionality<br>Parameters: test, t, vino18493@gmail.com, testingtesting, testingtesting, 987654321, //p[text()='Please enter a valid mobile phone number.'], Please enter a valid mobile phone number.</td>
 <td></td>
-<td>32</td>
-<td>testCaseBestBuy.CartTestBB@5fbdfdcf</td></tr>
+<td>23</td>
+<td>testCaseBestBuy.TC_03_CreatAccountFunctionality@2c1b194a</td></tr>
 <tr>
-<td title='testCaseBestBuy.CartTestBB.tc_07_selAddItemShopByDeptMenu()'><b>tc_07_selAddItemShopByDeptMenu</b><br>Test class: testCaseBestBuy.CartTestBB</td>
+<td title='testCaseBestBuy.TC_09_CheckOutPageFilling.tc_09_CheckOutPageFilling()'><b>tc_09_CheckOutPageFilling</b><br>Test class: testCaseBestBuy.TC_09_CheckOutPageFilling</td>
 <td></td>
-<td>32</td>
-<td>testCaseBestBuy.CartTestBB@5fbdfdcf</td></tr>
-<tr>
-<td title='testCaseBestBuy.CreatAccountTestBB.tc_03_validateCreatAccountFunctionality()'><b>tc_03_validateCreatAccountFunctionality</b><br>Test class: testCaseBestBuy.CreatAccountTestBB<br>Parameters: test, t, vino18493@gmail.com, testingtesting, , 9.87654321E9, //p[text()='Passwords do not match.'], Passwords do not match.</td>
-<td></td>
-<td>20</td>
-<td>testCaseBestBuy.CreatAccountTestBB@485966cc</td></tr>
+<td>66</td>
+<td>testCaseBestBuy.TC_09_CheckOutPageFilling@31fa1761</td></tr>
 </table><p>
 </body>
 </html>

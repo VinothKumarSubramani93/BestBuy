@@ -30,7 +30,6 @@ public class SignInPageBB extends BaseClassBB{
 		type(this.password, password);
 		clickOn(signInButton);
 		String actMsg=driver.findElement(By.xpath(""+textXpath+"")).getText();
-		screenShot("tc_03_SignInFunctionality "+Math.random()+"");
 		return actMsg;
 	}
 }

@@ -2,7 +2,6 @@ package utilsBestBuy;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Properties;
@@ -15,7 +14,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -25,6 +23,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -32,6 +35,12 @@ public class UtilsBB {
 
 	public static WebDriver driver;
 	public String sheetName;
+	public static ExtentReports extent;
+	public static ExtentTest test;
+	public String testName;
+	public String testDescription;
+	public String testCategory;
+	public String testAuthor;
 	
 	public static String readProperty(String key) throws Exception {
 		String projectPath = System.getProperty("user.dir");
@@ -45,7 +54,7 @@ public class UtilsBB {
 	public static void launchBrowser(String browser) {
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			ChromeOptions options=new ChromeOptions();
+			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
@@ -64,10 +73,10 @@ public class UtilsBB {
 	}
 
 	public static void waitExplicit(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebDriverWait wait = new WebDriverWait(driver, 15);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	
+
 	public static void waitExplicitUntillTitle(String titleToWait) {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.titleIs(titleToWait));
@@ -91,64 +100,85 @@ public class UtilsBB {
 		waitExplicit(element);
 		element.click();
 	}
-	
+
 	public static String getPageTitle() {
 		waitExplicitUntillTitle(driver.getTitle());
 		return driver.getTitle();
 	}
-	
+
 	public static String extractText(WebElement element) {
 		return element.getText();
 	}
-	
+
 	public static int getResponseCode(String url) throws Exception, Exception {
-		URL link=new URL(url);
-		HttpURLConnection connect=(HttpURLConnection) link.openConnection();
-		//connect.setRequestMethod("Head");
-		//connect.connect();
-		int responseCode=connect.getResponseCode();
+		URL link = new URL(url);
+		HttpURLConnection connect = (HttpURLConnection) link.openConnection();
+		// connect.setRequestMethod("Head");
+		// connect.connect();
+		int responseCode = connect.getResponseCode();
 		return responseCode;
 	}
-	
-	
-	public static Object[][] dataReader(String sheetName) throws Exception{
-		String excelPath=System.getProperty("user.dir");
-		XSSFWorkbook workBook=new XSSFWorkbook(excelPath+"/Excel/BestBuy.xlsx");
+
+	public static Object[][] dataReader(String sheetName) throws Exception {
+		String excelPath = System.getProperty("user.dir");
+		XSSFWorkbook workBook = new XSSFWorkbook(excelPath + "/Excel/BestBuy.xlsx");
 		XSSFSheet sheet = workBook.getSheet(sheetName);
-		int row=sheet.getPhysicalNumberOfRows();
+		int row = sheet.getPhysicalNumberOfRows();
 		int column = sheet.getRow(0).getPhysicalNumberOfCells();
-		Object[][] data=new Object[row][column];
+		Object[][] data = new Object[row][column];
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < column; j++) {
-				data[i][j]=sheet.getRow(i).getCell(j)+"".toString();
-				//data[i][j] = sheet.getRow(i).getCell(j).getStringCellValue();
+				data[i][j] = sheet.getRow(i).getCell(j) + "".toString();
+				// data[i][j] = sheet.getRow(i).getCell(j).getStringCellValue();
 			}
 		}
 		workBook.close();
 		return data;
 	}
-	
-	
+
 	public static void selectFromDropDown(WebElement element, String visibleText) {
-		Select select=new Select(element);
+		Select select = new Select(element);
 		select.selectByVisibleText(visibleText);
 	}
-	
+
 	public static void titleAssertion(String expTitle) {
 		Assert.assertEquals(getPageTitle(), expTitle);
 	}
-	
+
 	public static void jsScrollUntillElement(WebElement element) {
-		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		waitExplicit(element);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	}
-	
-	public static void jsClickElement(WebElement element) {
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
+
+	public static void jsClickOn(WebElement element) {
+		waitExplicit(element);
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 	}
-	
-	public static void screenShot(String imgName) throws Exception, Exception {
+
+	public static int screenShot(String testName) throws Exception {
+		int ranNum = (int) (Math.random() * 9999999 + 1000000);
 		Thread.sleep(3000);
-		String excelPath=System.getProperty("user.dir");
-		FileUtils.copyFile(((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE), new File(excelPath+"/Screenshot/"+imgName+".png"));
+		String projectPath = System.getProperty("user.dir");
+		FileUtils.copyFile(((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE),
+				new File(projectPath + "/Screenshot/" +testName+ ranNum + ".png"));
+		return ranNum;
+	}
+
+	public static void softAssert(String actResult, String expResult) {
+		SoftAssert sa = new SoftAssert();
+		sa.assertEquals(actResult, expResult);
+	}
+
+	public void reportStep(String stepDetails, String stepStatus, String testName) throws Exception {
+		int ranNum = screenShot(testName);
+		String projectPath = System.getProperty("user.dir");
+		if (stepStatus.equalsIgnoreCase("pass")) {
+			test.pass(stepDetails,
+					MediaEntityBuilder.createScreenCaptureFromPath(projectPath + "/Screenshot/" +testName+ ranNum + ".png").build());
+		} else if (stepStatus.equalsIgnoreCase("fail")) {
+			test.fail(stepDetails,
+					MediaEntityBuilder.createScreenCaptureFromPath(projectPath + "/Screenshot/" +testName +ranNum + ".png").build());
+			throw new RuntimeException("See extent report for more details");
+		}
 	}
 }

@@ -3,12 +3,16 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testCaseBestBuy.CartTestBB"/>
-      <class name="testCaseBestBuy.LocationTestBB"/>
-      <class name="testCaseBestBuy.SignInTestBB"/>
-      <class name="testCaseBestBuy.CheckOutTestBB"/>
-      <class name="testCaseBestBuy.CreatAccountTestBB"/>
-      <class name="testCaseBestBuy.HomeTestBB"/>
+      <class name="testCaseBestBuy.TC_09_CheckOutPageFilling"/>
+      <class name="testCaseBestBuy.TC_02_ValidateUrlIsNotBroken"/>
+      <class name="testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage"/>
+      <class name="testCaseBestBuy.TC_06_SearchAddItemInCart"/>
+      <class name="testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu"/>
+      <class name="testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu"/>
+      <class name="testCaseBestBuy.TC_03_CreatAccountFunctionality"/>
+      <class name="testCaseBestBuy.TC_03_SignInFunctionality"/>
+      <class name="testCaseBestBuy.TC_01_navgatingToBestBestApp"/>
+      <class name="testCaseBestBuy.TC_04_CheckTitleOfAllMenu"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
