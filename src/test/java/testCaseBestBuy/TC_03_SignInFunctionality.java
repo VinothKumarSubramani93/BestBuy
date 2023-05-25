@@ -28,7 +28,6 @@ public class TC_03_SignInFunctionality extends BaseClassBB {
 		SignInPageBB sp=new SignInPageBB();
 		String actMsg = sp.signInFunctionality(email,password,xpath);
 		softAssert(actMsg, expMsg);
-		reportStep("Validating Sign-In Functionality - Pass", "Pass", testName);
 		if (actMsg.equals(expMsg)) {
 			reportStep("Validating Sign-In Functionality - Pass", "Pass", testName);
 		} else {
