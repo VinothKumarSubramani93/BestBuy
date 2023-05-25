@@ -19,6 +19,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -56,10 +57,12 @@ public class UtilsBB {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			FirefoxOptions options=new FirefoxOptions();
+			options.addArguments("--headless");
+			driver = new FirefoxDriver(options);
 		} else if (browser.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
